@@ -1,4 +1,3 @@
-data/*
-9-3.tif
-.9-3.tif.icloud
+data/sequences/*
+data/archive/*
 *.icloud
