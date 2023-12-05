@@ -1,3 +1,6 @@
-data/sequences/*
-data/archive/*
+data/*
+renaud_data/*
+data
+renaud_data
+*.DS_Store
 *.icloud
