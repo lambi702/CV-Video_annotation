@@ -1,0 +1,6 @@
+json
+matplotlib
+numpy
+opencv-python
+joblib
+tqdm
