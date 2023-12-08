@@ -19,7 +19,7 @@
 %%%%%%%%%%%%%%
 
 \title{ELEN0016-2 Computer Vision Project: Cell Detection}
-\author{Romain Lambermont, Arthur Louis, Tom Navez}
+\author{Lambermont Romain, Louis Arthur, Navez Tom}
 \github{lambi702/CV-Video\_annotation}
 \link{https://github.com/lambi702/CV-Video_annotation/}
 
@@ -52,7 +52,7 @@ In this presentation, we invite you to explore our methodology, highlighting the
 \begin{block}{Mask importance}
  Flawless execution is paramount because any imperfections at this stage introduce noise that persists throughout subsequent steps. Consequently, considerable effort is invested in refining our masking method, extensively testing it across diverse sequences. Addressing exposure variations emerged as a significant challenge in this process.
 \end{block}
-Initially, we explored an energy score-based method for background reconstruction, but it yielded unsatisfactory results. We then adopted a simpler approach: computing the mean of pixels across 100 frames to establish the background. Subtracting this background from each frame and applying a threshold allowed us to efficiently generate the desired mask.
+Initially, we explored an energy score-based method for background reconstruction and the ViBe algorithm \cite{Vibe}, but it yielded unsatisfactory results. We then adopted a simpler approach: computing the mean of pixels across 100 frames to establish the background. Subtracting this background from each frame and applying a threshold allowed us to rapidly and efficiently generate the desired mask.
 
 \section{Isolating the Droplets}
     \begin{figure}[H]
@@ -61,7 +61,7 @@ Initially, we explored an energy score-based method for background reconstructio
         \caption{Computation of bounding boxes and creation of \texttt{.tif} and \texttt{.json} files for each box.}
         \label{fig:droplets}
     \end{figure}
-Bounding boxes were derived from the mask using the Circular Hough Transform function from OpenCV\cite{cv2}. We fine-tuned the function parameters to selectively detect circles within a specific radius range. Subsequently, based on the circle's center and radius, we computed a square around it. Addressing ellipsoidal cells posed a challenge, requiring additional parameter tuning in the function.
+Bounding boxes were derived from the mask using the Circular Hough Transform function from OpenCV \cite{cv2}. We fine-tuned the function parameters to selectively detect circles within a specific radius range. Subsequently, based on the circle's center and radius, we computed a square around it. Addressing ellipsoidal cells posed a challenge, requiring additional parameter tuning in the function.
 
 \section{Counting and Locating the Cells}
     \begin{figure}[H]
@@ -78,13 +78,13 @@ Bounding boxes were derived from the mask using the Circular Hough Transform fun
 \begin{alertblock}{Functions used from CV2 \cite{cv2}}
     %% HERE DETAIL THE FUNCTIONS USED IN THE PROJECT
 \begin{itemize}
-\item findContours:
+\item \texttt{findContours}:
 \begin{itemize}
 \item Used between the steps of mask creation and the identification of the bounding boxes.
 \end{itemize}
-\item HoughCircles:
+\item \texttt{HoughCircles}:
 \begin{itemize}
-    \item Task 1: Identifying circles around droplets, further enhancing background removal.
+    \item Task 1: Used to identify the droplets, allowing us to create the bounding boxes.
     \item Task 2: Used within isolated droplets to pinpoint cells.
     \end{itemize}
 \end{itemize}    
@@ -141,6 +141,9 @@ The neural network could have been a better idea if our purpose was only to coun
 
 
 \section{References}
+
+\nocite{Poster}
+
 \printbibliography[heading=none]
 
 \end{multicols}

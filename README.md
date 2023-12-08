@@ -6,9 +6,9 @@
 - [Installation](#installation)
 
 ## Authors
-- [Romain Lambermont](https://github.com/lambi702)  (s190931, romain.lambermont@student.uliege.be)
-- [Arthur Louis](https://github.com/Opeka-2201)     (s191230, alouis@student.uliege.be)
-- [Tom Navez](https://github.com/TomNavez)          (s192507, tom.navez@student.uliege.be)
+- [Romain Lambermont](https://github.com/lambi702)  (romain.lambermont@student.uliege.be)
+- [Arthur Louis](https://github.com/Opeka-2201)     (alouis@student.uliege.be)
+- [Tom Navez](https://github.com/TomNavez)          (tom.navez@student.uliege.be)
 
 ## Introduction
 This project is part of the ELEN0016 course at the Université de Liège. The goal of this project is to detect droplets and count cells in a given sequence. The project uses the OpenCV library to perform the image processing such as backgroung subtraction, thresholding, etc. The project is written in Python and can be run be simply lauching the Jupyter Notebook `main.ipynb` by correctly setting the different path variables to locate the data folders.
