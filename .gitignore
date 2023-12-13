@@ -5,3 +5,17 @@ data
 renaud_data
 *.DS_Store
 *.icloud
+*.aux
+*.bbl
+*.blg
+*.bcf
+*.log
+*.out
+*.nav
+*.fls
+*.fdb_latexmk
+*.snm
+*.synctex.gz
+*.run.xml
+*.synctex(busy)
+*.toc
